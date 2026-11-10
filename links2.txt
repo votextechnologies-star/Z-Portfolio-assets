@@ -1,0 +1,78 @@
+ <svg
+              ref={svgRef}
+              viewBox="0 0 500 500"
+              className="w-full h-full fill-none"
+            >
+              <path
+                ref={pathRef}
+                d="M 175 165 L 325 165 L 175 335 L 325 335"
+                className="fill-none stroke-background stroke-[50]"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+
+<svg viewBox="0 0 500 500" className="w-full h-full fill-none">
+            <path
+              ref={logoPathRef}
+              d="M 175 165 L 325 165 L 175 335 L 325 335"
+              className="fill-none stroke-foreground stroke-[50]"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+
+<svg className="w-full h-lvh" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path
+              className="overlay-svg-path fill-background"
+              d="M0 2S175 1 500 1s500 1 500 1V0H0Z"
+            />
+          </svg>
+
+<svg
+              viewBox={item.name === "Linkedin" ? "0 0 30 30" : "0 0 24 24"}
+              className="w-full h-full"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className="fill-foreground group-hover:fill-[#131212] transition-all duration-400 ease-in-out"
+                d={item.d}
+              />
+            </svg>
+
+ <svg width="0" height="0" className="absolute">
+          <defs>
+            <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
+              <path
+                ref={heroPathRef}
+                d="M 0,0 L 1,0 L 1,0.85 Q 0.7,0.95 0.4,0.95 Q 0.15,0.9 0,0.8 Z"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+
+<svg
+        className="absolute -inset-28 md:-inset-36 w-[calc(100%+14rem)] md:w-[calc(100%+18rem)] h-[calc(100%+14rem)] md:h-[calc(100%+18rem)] pointer-events-none z-20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <filter id={gooId}>
+            <feGaussianBlur in="SourceGraphic" stdDeviation="22" />
+            <feColorMatrix
+              type="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 60 -14"
+            />
+          </filter>
+        </defs>
+        <mask id={maskId}>
+          <g ref={maskGroupRef} filter={`url(#${gooId})`} fill="white" />
+        </mask>
+      </svg>
+
+<svg
+                  viewBox={item.viewBox || "0 0 24 24"}
+                  className="w-full h-full relative z-10"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {item.svgPath}
+                </svg>
